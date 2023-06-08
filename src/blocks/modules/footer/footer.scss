@@ -1,0 +1,40 @@
+.footer {
+    background: #3D4050;
+    width: 100%;
+    padding: 30px 20px;
+    &__container {
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        font-family: Lato, sans-serif;
+        font-size: 13px;
+        line-height: 15.6px;
+        font-weight: 400;
+        color: white;
+    }
+
+    &__payment {}
+
+    &__payment-qiwi {}
+
+    &__logo-svg {}
+
+    &__payment-title {}
+
+    &__payment-yandex {}
+
+    &__payment-web {}
+
+    &__contacts {}
+
+    &__contacts-mail {}
+
+    &__contacts-title {}
+
+    &__contacts-vk {}
+}
