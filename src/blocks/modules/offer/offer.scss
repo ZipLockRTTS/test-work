@@ -35,6 +35,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
 
     &__checkpoint-svg {
@@ -42,9 +43,12 @@
         height: 100px;
     }
 
-    &checkpoint-stick {
+    &__checkpoint-stick {
         width: 110px;
         height: 10px;
+        position: absolute;
+        top: 25%;
+        left: 96%;
     }
 
     &__checkpoint-title {
@@ -58,3 +62,101 @@
     }
 }
 
+$tablet: 768px;
+
+@mixin breakpoint($point) {
+  @if $point == untilTablet {
+    @media (max-width: $tablet - 1) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+}
+
+.dropdown {
+  width: 100%;
+  padding: 20px;
+  font-family: Lato, sans-serif;
+  
+  @include breakpoint(tablet) {
+    width: 600px;
+  }
+  
+  &__switch:checked + &__options-filter &__select {
+    transform: scaleY(1);
+  }
+  
+  &__switch:checked + &__options-filter &__filter:after {
+    transform: rotate(-135deg);
+  }
+  
+  &__options-filter {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__filter {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    color: #595959;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: .3s;
+    list-style: none;
+    
+    &:focus {
+      border: 1px solid #918FF4;
+      outline: none;
+      box-shadow: 0 0 5px 3px #918FF4;
+    }
+
+    &::after {
+      position: absolute;
+      top: 45%;
+      right: 20px;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #595959;
+      border-bottom: 2px solid #595959;
+      transform: rotate(45deg) translateX(-45%);
+      transition: .2s ease-in-out;
+    }
+  }
+
+  &__select {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0 rgba(152, 152, 152, 0.6);
+    transform: scaleY(0);
+    transform-origin: top;
+    font-weight: 300;
+    transition: .2s ease-in-out;
+  }
+
+  &__select-option {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #d6d6d6;
+    transition: .3s;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  } 
+}
