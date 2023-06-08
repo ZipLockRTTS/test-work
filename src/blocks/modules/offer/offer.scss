@@ -1,0 +1,24 @@
+.offer {
+    padding: 120px 0px 150px;
+    background-image: url(/img/offer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    &__titles {}
+
+    &__blue {}
+
+    &__titles-subtitle {}
+
+    &__roadmap {}
+
+    &__checkpoint {}
+
+    &__checkpoint-svg {}
+
+    &__checkpoint-title {}
+}
