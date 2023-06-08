@@ -8,17 +8,48 @@
         margin: auto;
     }
 
-    &__titles {}
+    &__titles {
+        text-align: center;
+        color: white;
+    }
 
-    &__blue {}
+    &__blue {
+        color: #3E9CDC;
+    }
 
-    &__titles-subtitle {}
+    &__subtitle {
+        font-size: 18px;
+        line-height: 21.6px;
+        font-weight: 400;
+        margin: 0;
+        padding: 30px 0px 80px 0px;
+    }
 
-    &__roadmap {}
+    &__roadmap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-    &__checkpoint {}
+    &__checkpoint {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-    &__checkpoint-svg {}
+    &__checkpoint-svg {
+        width: 100px;
+        height: 100px;
+    }
 
-    &__checkpoint-title {}
+    &__checkpoint-title {
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+    }
 }
+
