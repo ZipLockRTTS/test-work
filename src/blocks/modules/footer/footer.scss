@@ -11,30 +11,53 @@
     }
 
     &__copyright {
-        font-family: Lato, sans-serif;
-        font-size: 13px;
-        line-height: 15.6px;
-        font-weight: 400;
         color: white;
     }
 
-    &__payment {}
+    &__payment {
+        display: flex;
+        gap: 38px;
+    }
 
-    &__payment-qiwi {}
+    &__payment-card {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-    &__logo-svg {}
+    &__logo-svg {
+        width: 20px;
+        height: 20px;
+    }
 
-    &__payment-title {}
+    &__payment-title {
+        color: #C3C3C3;
+        &:hover {
+            color: #43ABF0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
 
-    &__payment-yandex {}
+    &__contacts {
+        display: flex;
+        gap: 38px;
+    }
 
-    &__payment-web {}
+    &__contacts-card {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-    &__contacts {}
-
-    &__contacts-mail {}
-
-    &__contacts-title {}
-
-    &__contacts-vk {}
+    &__contacts-title {
+        color: white;
+        &:hover {
+            color: #43ABF0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
 }
