@@ -1,0 +1,63 @@
+.hero {
+    padding: 200px 0;
+    background-image: url(/img/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    &__blue {
+        color: #3E9CDC;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        margin: 0;
+        padding: 80px 0px 10px 0px;
+    }
+
+    &__menu {
+        font-family: Lato, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        padding: 0 10px;
+        list-style: none;
+    }
+
+    &__menu-item {
+        &:before {
+            content:  "-";
+            position: relative;
+            left:     -5px;
+        }
+    }
+
+    &__block {
+        padding: 80px 0px 0px 0px;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__block-btn {
+        font-family: Lato, sans-serif;
+        font-size: 13px;
+        line-height: 15.6px;
+        font-weight: 400;
+        padding: 15px 50px;
+        border: 1px solid #C3C3C3;
+        border-radius: 6px;
+        background: white;
+        color: black;
+        &_blue {
+            background: #3E9CDC;
+            border: 1px solid #FFFFFF;
+            color: white;
+        }
+    }
+
+}
