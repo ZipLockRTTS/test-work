@@ -61,3 +61,48 @@
         }
     }
 }
+
+@media screen and (max-width: $tablet) {
+    .footer {
+        padding: 30px 20px;
+        &__container {
+            flex-direction: column;
+        }
+        &__copyright{
+            order: 1;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .footer {
+        width: auto;
+        &__payment {
+            gap: 10px;
+        }
+        &__contacts {
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: $semobile){
+    .footer {
+        width: auto;
+        &__copyright {
+            text-align: center;
+        }
+        &__contacts {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        &__contacts-card {
+            gap: 4px;
+        }
+        &__payment {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
