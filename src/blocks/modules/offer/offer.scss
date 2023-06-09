@@ -251,8 +251,6 @@
   }
 }
 
-$tablet: 768px;
-
 .dropdown {
   width: 100%;
   font-family: Lato, sans-serif;
@@ -354,4 +352,105 @@ $tablet: 768px;
       color: #42A9ED;
     }
   } 
+}
+
+@media screen and (max-width: $tablet) {
+    .offer {
+      padding: 120px 30px 150px 30px;
+      &__checkpoint-title {
+        font-size: 14px;
+      }
+      &__checkpoint-stick {
+        width: 70px;
+        left: 92%;
+      }
+      &__file-button {
+        min-width: 100%;
+      }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+  .offer {
+    padding: 80px 30px 60px 30px;
+    &__email {
+      font-size: 12px;
+    }
+    &__name {
+      font-size: 12px;
+    }
+    &__checkpoint-stick {
+      left: 68%;
+      top: 26%;
+      z-index: 0;
+    }
+    &__subtitle {
+      padding: 30px 0px 40px 0px;;
+    }
+    &__inputs {
+      padding: 25px 0px 20px 0px;
+    }
+    &__checkpoint-svg {
+      z-index: 1;
+    }
+    &__checkpoint-title {
+      font-size: 11px;
+    }
+  }
+  .dropdown {
+    &__filter {
+      font-size: 12px;
+    }
+    &__select-option {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $aplmobile) {
+  .offer {
+    padding: 80px 20px 60px 20px;
+    &__roadmap {
+      flex-direction: column;
+    }
+    &__checkpoint-title {
+      font-size: 16px;
+    }
+    &__checkpoint-stick {
+      display: none;
+    }
+    &__inputs {
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__email {
+      width: -webkit-fill-available;
+      font-size: 16px;
+    }
+    &__name {
+      width: -webkit-fill-available;
+      font-size: 16px;
+    }
+    &__progress {
+      flex-direction: column;
+      gap: 25px;
+    }
+    &__slider {
+      width: 100%;
+    }
+    &__btn {
+      width: 100%;
+    }
+    &__success {
+      padding: 0px 0px 0px 0px;
+    }
+    &__success-send {
+      width: 100%;
+    }
+  }
+  .dropdown {
+    &__filter {
+      font-size: 16px;
+    }
+  }
 }
