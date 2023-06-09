@@ -53,10 +53,25 @@
         border-radius: 6px;
         background: white;
         color: black;
+        cursor: pointer;
+        transition: .6s;
+        &:hover {
+            background: #3E9CDC;
+            color: white;
+            border: 1px solid #FFFFFF;
+            transition: .6s;
+        }
         &_blue {
             background: #3E9CDC;
             border: 1px solid #FFFFFF;
             color: white;
+            transition: .6s;
+            &:hover{
+                background: white;
+                border: 1px solid #3E9CDC;
+                color: black;
+                transition: .6s;
+            }
         }
     }
 
