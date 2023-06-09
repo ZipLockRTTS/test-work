@@ -76,3 +76,62 @@
     }
 
 }
+
+@media screen and (max-width: $tablet) {
+    .hero {
+        padding: 200px 20px 100px 20px;
+        background-size: cover;
+        background-position: center;
+
+        &__title {
+            padding: 43px 0px 10px 0px;
+        }
+
+        &__block {
+            padding: 40px 0px 0px 0px;
+        }
+    }
+
+    .hero h1 {
+        font-size: 35px;
+        line-height: 40.6px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .hero {
+        &__title {
+            padding: 15px 0px 15px 0px;
+        }
+        &__menu {
+            font-size: 15px;
+        }
+        &__block {
+            padding: 20px 0px 0px 0px;
+            gap: 10px;
+            flex-direction: column;
+        }
+        &__block-btn {
+            width: 100%;
+        }
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        line-height: 34.6px;
+    }
+}
+
+@media screen and (max-width: $semobile) {
+    .hero {
+        &__title {
+            padding: 20px 0px 15px 0px;
+            font-size: 19px;
+        }
+    }
+
+    .hero h1 {
+        font-size: 23px;
+        line-height: 31.6px;
+    }
+}
