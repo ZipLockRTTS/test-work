@@ -48,8 +48,9 @@
                 <p class="offer__checkpoint-title">Excepteur sint occaecat<br> cupidatat non proident</p>
             </div>
         </div>
-        <div class="offer__form">
+        <div class="offer__inputs">
             <div class="dropdown">
+                <input type="hidden" id="dropdown__value">
                 <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
                 <label for="filter-switch" class="dropdown__options-filter">
                   <ul class="dropdown__filter" role="listbox" tabindex="-1">
@@ -78,8 +79,28 @@
                   </ul>     
                 </label>
             </div>
-            <input type="email" placeholder="Ваш e-mail" />
-            <input id="message_id" placeholder="Ваше имя" name="message_name" type="text" />
+            <input class="offer__email" maxlength="25" type="email" placeholder="Ваш e-mail" name="message_email" />
+            <input class="offer__name" maxlength="15" id="message_id" placeholder="Ваше имя" name="message_name" type="text" />
+        </div>
+        <div class="offer__progress">
+            <div class="offer__slider">
+                <div class="progressbar">
+                    <p class="progressbar__text">Sed ut perspiciatis, unde omnis iste natus</p>
+                    <input class="example-val" id="slider-step-value" readonly name="procent-bar">
+                </div>
+                <div id="slider-step"></div>
+            </div>
+            <div class="offer__btn">
+                <input id="input__file" class="offer__download" type="file" name="file-download">
+                <label for="input__file" class="offer__file-button">
+                    <span class="offer__file-icon-wrapper">
+                        <svg class="input__file-icon">
+                            <use xlink:href="img/sprites/sprite.svg#download-icon"></use>
+                        </svg>
+                    </span>
+                    <span class="offer__file-button-text">Прикрепить файл</span>
+                </label>
+            </div>
         </div>
     </div>
 </div>
