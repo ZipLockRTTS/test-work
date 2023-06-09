@@ -38,7 +38,12 @@ noUiSlider.create(stepSlider, {
 var stepSliderValueElement = document.getElementById('slider-step-value');
 
 stepSlider.noUiSlider.on('update', function (values, handle) {
-    stepSliderValueElement.value = values[handle];
+    stepSliderValueElement.innerHTML = values[handle];
+    let inputProcent = document.querySelector('#slider-step-value');
+    inputProcent.value = values[handle];
+
+    let inputHidden = document.querySelector('#hidden-step-vl');
+    inputHidden.value = values[handle];
 });
 
 let inputs = document.querySelectorAll('.offer__download');

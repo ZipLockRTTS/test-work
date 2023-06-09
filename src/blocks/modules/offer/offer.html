@@ -48,59 +48,80 @@
                 <p class="offer__checkpoint-title">Excepteur sint occaecat<br> cupidatat non proident</p>
             </div>
         </div>
-        <div class="offer__inputs">
-            <div class="dropdown">
-                <input type="hidden" id="dropdown__value">
-                <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
-                <label for="filter-switch" class="dropdown__options-filter">
-                  <ul class="dropdown__filter" role="listbox" tabindex="-1">
-                    <li class="dropdown__filter-selected" aria-selected="true">
-                        Выберите тип системы
-                    </li>
-                    <li>
-                      <ul class="dropdown__select">
-                        <li class="dropdown__select-option" role="option">
-                            Sed ut perspiciatis
+        <form action="offer__form" autocomplete="off" action="mail.php" method="post">
+            <div class="offer__inputs">
+                <div class="dropdown">
+                    <input type="hidden" id="dropdown__value">
+                    <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
+                    <label for="filter-switch" class="dropdown__options-filter">
+                      <ul class="dropdown__filter" role="listbox" tabindex="-1">
+                        <li class="dropdown__filter-selected" aria-selected="true">
+                            Выберите тип системы
                         </li>
-                        <li class="dropdown__select-option" role="option">
-                            Nemo enim ipsam
+                        <li>
+                          <ul class="dropdown__select">
+                            <li class="dropdown__select-option" role="option">
+                                Sed ut perspiciatis
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Nemo enim ipsam
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Et harum quidem
+                            </li>
+                            <li class="dropdown__select-option" role="option">  
+                                Temporibus autem
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Itaque earum rerum
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Itaque earum rerum
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Itaque earum rerum
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Itaque earum rerum
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Itaque earum rerum
+                            </li>
+                            <li class="dropdown__select-option" role="option">
+                                Itaque earum rerum
+                            </li>
+                          </ul>
                         </li>
-                        <li class="dropdown__select-option" role="option">
-                            Et harum quidem
-                        </li>
-                        <li class="dropdown__select-option" role="option">  
-                            Temporibus autem
-                        </li>
-                        <li class="dropdown__select-option" role="option">
-                            Itaque earum rerum
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>     
-                </label>
-            </div>
-            <input class="offer__email" maxlength="25" type="email" placeholder="Ваш e-mail" name="message_email" />
-            <input class="offer__name" maxlength="15" id="message_id" placeholder="Ваше имя" name="message_name" type="text" />
-        </div>
-        <div class="offer__progress">
-            <div class="offer__slider">
-                <div class="progressbar">
-                    <p class="progressbar__text">Sed ut perspiciatis, unde omnis iste natus</p>
-                    <input class="example-val" id="slider-step-value" readonly name="procent-bar">
+                      </ul>     
+                    </label>
                 </div>
-                <div id="slider-step"></div>
+                <input class="offer__email" maxlength="25" type="email" placeholder="Ваш e-mail" name="message_email" />
+                <input class="offer__name" maxlength="15" id="message_id" placeholder="Ваше имя" name="message_name" type="text" />
             </div>
-            <div class="offer__btn">
-                <input id="input__file" class="offer__download" type="file" name="file-download">
-                <label for="input__file" class="offer__file-button">
-                    <span class="offer__file-icon-wrapper">
-                        <svg class="input__file-icon">
-                            <use xlink:href="img/sprites/sprite.svg#download-icon"></use>
-                        </svg>
-                    </span>
-                    <span class="offer__file-button-text">Прикрепить файл</span>
-                </label>
+            <div class="offer__progress">
+                <div class="offer__slider">
+                    <div class="progressbar">
+                        <p class="progressbar__text">Sed ut perspiciatis, unde omnis iste natus</p>
+                        <span class="example-val" id="slider-step-value" readonly name="procent-bar"></span>
+                        <input id="hidden-step-vl" type="hidden" class="progress__coppy" readonly name="procent-bar">
+                    </div>
+                    <div id="slider-step"></div>
+                </div>
+                <div class="offer__btn">
+                    <input id="input__file" class="offer__download" type="file" name="file-download">
+                    <label for="input__file" class="offer__file-button">
+                        <span class="offer__file-icon-wrapper">
+                            <svg class="input__file-icon">
+                                <use xlink:href="img/sprites/sprite.svg#download-icon"></use>
+                            </svg>
+                        </span>
+                        <span class="offer__file-button-text">Прикрепить файл</span>
+                    </label>
+                </div>
             </div>
-        </div>
+            <div class="offer__success">
+                <input class="offer__success-send" type="submit" value="ОТПРАВИТЬ">
+            </div>
+        </form>
     </div>
 </div>

@@ -72,30 +72,38 @@
     &__email {
       width: 100%;
       padding: 12px;
-      color: #595959;
+      color: #272733;
       background: rgba(255, 255, 255, 0.85);
       border: 1px solid #FFFFFF;
       border-radius: 3px;
       font-size: 18px;
       font-family: Lato, sans-serif;
+
+      &::placeholder {
+        color: #272733;
+      }
     }
   
     &__name {
       width: 100%;
       padding: 12px;
-      color: #595959;
+      color: #272733;
       background: rgba(255, 255, 255, 0.85);
       border: 1px solid #FFFFFF;
       border-radius: 3px;
       font-size: 18px;
       font-family: Lato, sans-serif;
+
+      &::placeholder {
+        color: #272733;
+      }
     }
   
     &__progress {
       display: flex;
       gap: 30px;
       padding: 30px 0;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
     }
 
@@ -130,6 +138,7 @@
       border-radius: 3px;
       cursor: pointer;
       margin: 0 auto;
+      border: 2px solid #3E9CDC;
     }
 
     &__file-icon-wrapper {
@@ -151,11 +160,30 @@
       line-height: 1;
       margin-top: 1px;
     }
+
+    &__success {
+      padding: 40px 0px 0px 0px;
+      text-align: center;
+    }
+
+    &__success-send {
+      background: #3E9CDC;
+      border: 1px solid #FFFFFF;
+      border-radius: 4px;
+      color: white;
+      font-family: Lato, sans-serif;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 600;
+      padding: 17.5px 124px;
+      cursor: pointer;
+    } 
 }
 
 .progressbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   &__text {
     font-size: 18px;
     line-height: 21.6px;
@@ -165,37 +193,50 @@
 }
 
 .example-val {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   background-color: transparent;
   border: none;
   text-align: end;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 600;
+  font-family: Lato, sans-serif;
   &:focus-visible {
     outline: none;
   }
 }
 
-$tablet: 768px;
+.noUi-horizontal {
+  height: 6px;
+}
 
-@mixin breakpoint($point) {
-  @if $point == untilTablet {
-    @media (max-width: $tablet - 1) {
-      @content;
-    }
-  } @else if $point == tablet {
-    @media (min-width: $tablet) {
-      @content;
-    }
+.noUi-connect, .noUi-origin {
+  top: -3px;
+}
+
+.noUi-touch-area, .noUi-horizontal .noUi-handle {
+  height: 23.72px;
+  width: 23.72px;
+}
+
+.noUi-handle {
+  background: #42A9ED;
+  border: 3px solid #286690;
+  box-shadow: none;
+  border-radius: 100%;
+  &::after {
+    display: none;
+  }
+  &::before {
+    display: none;
   }
 }
+
+$tablet: 768px;
 
 .dropdown {
   width: 100%;
   font-family: Lato, sans-serif;
-  
-  @include breakpoint(tablet) {
-    width: 100%;
-    height: 48px;
-  }
   
   &__switch:checked + &__options-filter &__select {
     transform: scaleY(1);
@@ -214,7 +255,7 @@ $tablet: 768px;
     position: relative;
     display: flex;
     padding: 12px;
-    color: #595959;
+    color: #272733;
     background: rgba(255, 255, 255, 0.85);
     border: 1px solid #FFFFFF;
     border-radius: 3px;
@@ -223,9 +264,11 @@ $tablet: 768px;
     list-style: none;
     
     &:focus {
-      border: 1px solid #918FF4;
+      border: none;
       outline: none;
-      box-shadow: 0 0 5px 3px #918FF4;
+      background: rgba(61, 64, 80, 0.85);
+      border-radius: 3px 3px 0px 0px;
+      color: white;
     }
 
     &::after {
@@ -248,27 +291,48 @@ $tablet: 768px;
     top: 100%;
     left: 0;
     width: 100%;
-    margin-top: 5px;
     overflow: hidden;
-    box-shadow: 0 5px 10px 0 rgba(152, 152, 152, 0.6);
     transform: scaleY(0);
     transform-origin: top;
     font-weight: 300;
     transition: .2s ease-in-out;
+    overflow-y: scroll;
+    max-height: 307px;
+    border: none;
+    border-radius: 0px 0px 3px 3px;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background: #3D4050;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #3E9CDC;
+      border-radius: 3px;
+    }
+
   }
 
   &__select-option {
     padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #d6d6d6;
+    background-color: #272733;
     transition: .3s;
+    border: none;
+    outline: none;
+    background: rgb(61 64 80);;
+    color: white;
 
     &:last-of-type {
       border-bottom: 0;
     }
 
+    &:focus {
+      color: black;
+    }
+
     &:hover {
-      background-color: #f9f9f9;
+      color: #42A9ED;
     }
   } 
 }
